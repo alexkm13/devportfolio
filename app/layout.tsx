@@ -5,8 +5,8 @@ import { Footer } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "alex",
-    template: "%s | alex",
+    default: "alex's dev portfolio",
+    template: "%s | alex's dev portfolio",
   },
   description: "developer. building things for the web.",
   keywords: ["developer", "portfolio", "web development", "react", "next.js"],
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://alex.dev",
-    siteName: "alex",
-    title: "alex",
+    siteName: "alex's dev portfolio",
+    title: "alex's dev portfolio",
     description: "developer. building things for the web.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "alex",
+    title: "alex's dev portfolio",
     description: "developer. building things for the web.",
     creator: "@alex",
   },
