@@ -1,6 +1,6 @@
-# Personal Website
+# Alex's Dev Portfolio
 
-A modern, playful personal website built with Next.js 14, Tailwind CSS, and Framer Motion.
+Personal webpage to display my projects, resume, and blog posts.
 
 ## Features
 
@@ -112,32 +112,6 @@ Colors and design tokens are defined in `app/globals.css`. Modify the CSS custom
   /* ... */
 }
 ```
-
-### Adding Images
-
-Place project images in `public/images/projects/` and update the image paths in your project data.
-
-## Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Import your repository on [Vercel](https://vercel.com)
-3. Deploy!
-
-### Other Platforms
-
-```bash
-npm run build
-npm run start
-```
-
-## Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
 
 ## License
 
