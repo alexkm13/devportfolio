@@ -102,7 +102,7 @@ export default function BlogPostPage() {
           return text.split(/(\[[^\]]+\]\([^)]+\))/).map((part, i) => {
             const linkMatch = part.match(/\[([^\]]+)\]\(([^)]+)\)/);
             if (linkMatch) {
-              return (
+            return (
                 <a
                   key={i}
                   href={linkMatch[2]}
@@ -118,15 +118,15 @@ export default function BlogPostPage() {
             return part.split(/(`[^`]+`)/).map((codePart, j) => {
               if (codePart.startsWith("`") && codePart.endsWith("`")) {
                 return <code key={`${i}-${j}`}>{codePart.slice(1, -1)}</code>;
-              }
-              // Process bold
+          }
+          // Process bold
               return codePart.split(/(\*\*[^*]+\*\*)/).map((boldPart, k) => {
                 if (boldPart.startsWith("**") && boldPart.endsWith("**")) {
                   return <strong key={`${i}-${j}-${k}`} className="text-[var(--foreground)]">{boldPart.slice(2, -2)}</strong>;
-                }
+            }
                 return boldPart;
-              });
-            });
+          });
+        });
           });
         };
 
@@ -145,57 +145,57 @@ export default function BlogPostPage() {
     <div className="min-h-screen">
       <div className="max-w-2xl mx-auto px-6 py-20">
         {/* Back link */}
-        <Link
-          href="/blog"
+            <Link
+              href="/blog"
           className="inline-flex items-center gap-2 text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors mb-8 text-sm"
-        >
+              >
           ← back to blog
-        </Link>
+            </Link>
 
         {/* Header */}
         <header className="mb-8">
           <div className="flex items-center gap-3 text-sm text-[var(--muted-foreground)] mb-4">
-            <time dateTime={post.date}>{formatDate(post.date)}</time>
+              <time dateTime={post.date}>{formatDate(post.date)}</time>
             <span>·</span>
-            <span>{post.content ? readingTime(post.content) : "5 min read"}</span>
-          </div>
+              <span>{post.content ? readingTime(post.content) : "5 min read"}</span>
+            </div>
           <h1 className="text-2xl md:text-3xl font-bold text-[var(--foreground)] mb-4">
-            {post.title}
-          </h1>
+              {post.title}
+            </h1>
           <p className="text-[var(--muted-foreground)]">
-            {post.description}
-          </p>
+              {post.description}
+            </p>
         </header>
 
         <hr className="mb-8" />
 
-        {/* Content */}
+      {/* Content */}
         <article className="prose">
-          {post.content && renderContent(post.content)}
-        </article>
+              {post.content && renderContent(post.content)}
+            </article>
 
         <hr className="my-12" />
 
-        {/* Navigation */}
+      {/* Navigation */}
         <nav className="flex justify-between text-sm">
-          {prevPost.slug !== post.slug && (
+              {prevPost.slug !== post.slug && (
             <Link
               href={`/blog/${prevPost.slug}`}
               className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors"
-            >
+                      >
               ← {prevPost.title.length > 30 ? prevPost.title.slice(0, 30) + "..." : prevPost.title}
-            </Link>
-          )}
-          {nextPost.slug !== post.slug && (
+                </Link>
+              )}
+              {nextPost.slug !== post.slug && (
             <Link
               href={`/blog/${nextPost.slug}`}
               className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors ml-auto"
-            >
+                  >
               {nextPost.title.length > 30 ? nextPost.title.slice(0, 30) + "..." : nextPost.title} →
-            </Link>
-          )}
+                </Link>
+              )}
         </nav>
-      </div>
+        </div>
     </div>
   );
 }

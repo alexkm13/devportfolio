@@ -18,16 +18,16 @@ export function Navigation() {
       <nav className="max-w-2xl mx-auto px-6 py-6">
         <div className="flex items-center gap-6">
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
                 "nav-link text-sm",
                 pathname === link.href && "active"
-              )}
-            >
-              {link.label}
-            </Link>
+                  )}
+                >
+                  {link.label}
+                </Link>
           ))}
         </div>
       </nav>

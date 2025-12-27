@@ -16,11 +16,11 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen">
       <div className="max-w-2xl mx-auto px-6 py-20">
-        {/* Header */}
+      {/* Header */}
         <header className="mb-12">
           <h1 className="text-3xl font-bold text-[var(--foreground)] mb-4">
             blog
-          </h1>
+            </h1>
           <p className="text-[var(--muted-foreground)]">
             thoughts on code, design, and everything in between.
           </p>
@@ -45,14 +45,14 @@ export default function BlogPage() {
           ))}
         </div>
 
-        {posts.length === 0 && (
+          {posts.length === 0 && (
           <p className="text-[var(--muted-foreground)]">
             no posts yet. check back soon.
           </p>
         )}
 
         <hr className="my-12" />
-      </div>
+        </div>
     </div>
   );
 }

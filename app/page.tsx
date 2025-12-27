@@ -13,6 +13,14 @@ const experience = [
   }
 ];
 
+const education = [
+  {
+    title: "BA in Computer Science and Mathematics",
+    school: "Boston University",
+    period: "2021 - 2026",
+  }
+];
+
 export default function Home() {
   return (
     <div className="min-h-[80vh] flex flex-col justify-center">
@@ -76,6 +84,30 @@ export default function Home() {
                 </div>
                 <p className="text-sm text-[var(--muted-foreground)]">
                   {exp.company}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Education */}
+        <section className="mb-12">
+          <h2 className="text-xl font-bold text-[var(--foreground)] mb-4">
+            education
+          </h2>
+          <div className="space-y-4">
+            {education.map((edu) => (
+              <div key={edu.title}>
+                <div className="flex justify-between items-baseline">
+                  <h3 className="text-[var(--foreground)] font-medium">
+                    {edu.title}
+                  </h3>
+                  <span className="text-sm text-[var(--muted-foreground)]">
+                    {edu.period}
+                  </span>
+                </div>
+                <p className="text-sm text-[var(--muted-foreground)]">
+                  {edu.school}
                 </p>
               </div>
             ))}

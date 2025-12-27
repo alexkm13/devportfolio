@@ -15,7 +15,7 @@ export default function NotFound() {
           className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors"
         >
           ← back to home
-        </Link>
+          </Link>
       </div>
     </div>
   );

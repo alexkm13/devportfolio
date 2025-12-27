@@ -23,30 +23,30 @@ export default function ProjectPage() {
     <div className="min-h-screen">
       <div className="max-w-2xl mx-auto px-6 py-20">
         {/* Back link */}
-        <Link
-          href="/projects"
+            <Link
+              href="/projects"
           className="inline-flex items-center gap-2 text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors mb-8 text-sm"
         >
           ← back to projects
-        </Link>
+            </Link>
 
         {/* Header */}
         <header className="mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-[var(--foreground)] mb-4">
-            {project.title}
-          </h1>
+                  {project.title}
+                </h1>
           <p className="text-[var(--muted-foreground)] leading-relaxed mb-4">
-            {project.description}
-          </p>
+                  {project.description}
+                </p>
           <div className="flex flex-wrap gap-2 mb-6">
-            {project.tags.map((tag) => (
+                  {project.tags.map((tag) => (
               <span key={tag} className="tag">
                 {tag.toLowerCase()}
-              </span>
-            ))}
-          </div>
+                    </span>
+                  ))}
+                </div>
           <div className="flex gap-4">
-            {project.link && (
+                  {project.link && (
               <a
                 href={project.link}
                 target="_blank"
@@ -56,10 +56,10 @@ export default function ProjectPage() {
                 live
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-            )}
-            {project.github && (
+                          </svg>
+                    </a>
+                  )}
+                  {project.github && (
               <a
                 href={project.github}
                 target="_blank"
@@ -69,9 +69,9 @@ export default function ProjectPage() {
                 source
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-            )}
+                          </svg>
+                    </a>
+                  )}
           </div>
         </header>
 
@@ -85,32 +85,32 @@ export default function ProjectPage() {
           <p className="text-[var(--muted-foreground)] leading-relaxed mb-4">
             this project was built to solve real-world challenges and demonstrate
             modern development practices. it showcases my ability to create polished,
-            production-ready applications with attention to detail in both design and functionality.
-          </p>
+                production-ready applications with attention to detail in both design and functionality.
+              </p>
           <p className="text-[var(--muted-foreground)] leading-relaxed">
             key features include responsive design, performance optimization,
-            accessibility considerations, and clean, maintainable code architecture.
-          </p>
-        </section>
+                accessibility considerations, and clean, maintainable code architecture.
+              </p>
+      </section>
 
         <hr className="my-12" />
 
-        {/* Navigation */}
+      {/* Navigation */}
         <nav className="flex justify-between text-sm">
           <Link
             href={`/projects/${prevProject.slug}`}
             className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors"
-          >
+                  >
             ← {prevProject.title.length > 25 ? prevProject.title.slice(0, 25) + "..." : prevProject.title}
-          </Link>
+            </Link>
           <Link
             href={`/projects/${nextProject.slug}`}
             className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors"
-          >
+              >
             {nextProject.title.length > 25 ? nextProject.title.slice(0, 25) + "..." : nextProject.title} →
-          </Link>
+            </Link>
         </nav>
-      </div>
+        </div>
     </div>
   );
 }
