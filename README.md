@@ -1,6 +1,6 @@
 # Alex's Dev Portfolio
 
-Personal webpage to display my projects, resume, and blog posts.
+My personal webpage to display my projects, resume, and blog posts.
 
 ## Features
 
